@@ -1,7 +1,15 @@
-interface IEleicao
+﻿using System.Collections.Generic;
+
+namespace ConsoleApp8
 {
-    void criaCandidato(Candidato candidato);
-    Candidato retornaCandidatos();
-    void votar(Voto voto);
-    Voto retornaVotos(Voto voto);
+    internal interface IEleicao
+    {
+        void criaCandidato(Candidato candidato);
+
+        List<Candidato> retornaCandidatos();
+
+        void cadastrarVoto(Voto voto);
+
+        List<Voto> retornaVotos();
+    }
 }
