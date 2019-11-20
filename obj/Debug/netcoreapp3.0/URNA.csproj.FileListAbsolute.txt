@@ -1,0 +1,3 @@
+/home/ivan/Downloads/URNA/obj/Debug/netcoreapp3.0/URNA.csprojAssemblyReference.cache
+/home/ivan/Downloads/URNA/obj/Debug/netcoreapp3.0/URNA.AssemblyInfoInputs.cache
+/home/ivan/Downloads/URNA/obj/Debug/netcoreapp3.0/URNA.AssemblyInfo.cs
