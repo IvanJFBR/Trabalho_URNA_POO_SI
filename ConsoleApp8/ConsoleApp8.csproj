@@ -44,19 +44,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Candidato.cs" />
-    <Compile Include="Dep_Estadual.cs" />
-    <Compile Include="Dep_Federal.cs" />
+    <Compile Include="TipoEleicao\Dep_Estadual.cs" />
+    <Compile Include="TipoEleicao\Dep_Federal.cs" />
     <Compile Include="Eleitor.cs" />
-    <Compile Include="Executivo.cs" />
-    <Compile Include="Governador.cs" />
-    <Compile Include="Legislativo.cs" />
+    <Compile Include="TipoEleicao\Governador.cs" />
+    <Compile Include="IEleicao.cs" />
     <Compile Include="Partido.cs" />
     <Compile Include="Pessoa.cs" />
-    <Compile Include="Pref_Municipal.cs" />
-    <Compile Include="Presidente.cs" />
+    <Compile Include="TipoEleicao\Pref_Municipal.cs" />
+    <Compile Include="TipoEleicao\Presidente.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vereador_Municipal.cs" />
+    <Compile Include="TipoEleicao\Vereador_Municipal.cs" />
     <Compile Include="Voto.cs" />
   </ItemGroup>
   <ItemGroup>
