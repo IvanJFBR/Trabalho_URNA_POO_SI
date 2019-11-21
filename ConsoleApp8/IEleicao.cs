@@ -1,7 +1,17 @@
-interface IEleicao
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp8
 {
-    void criaCandidato(Candidato candidato);
-    Candidato retornaCandidatos();
-    void votar(Voto voto);
-    Voto retornaVotos(Voto voto);
+    interface IEleicao
+    {
+        Eleicao criarEleicao(string tipo_eleicao, string ambito_eleicao);
+
+        void cadastrarCandidato(Eleicao eleicao, Candidato candidato);
+
+        void votar(Eleicao eleicao, Eleitor eleitor, int numeroCandidato);
+    }
 }
