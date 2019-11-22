@@ -26,10 +26,18 @@ namespace ConsoleApp8
                     case 0:
                         break;
                     case 1:
-                        legislativo();
+                        cadastrarEleicao(new List<string>() { 
+                            "Deputado Estadual", 
+                            "Deputado Federal", 
+                            "Vereador Municipal" 
+                        });
                         break;
                     case 2:
-                        legislativo();
+                        cadastrarEleicao(new List<string>() { 
+                            "Deputado Estadual", 
+                            "Deputado Federal", 
+                            "Vereador Municipal" 
+                        });
                         break;
                 }
 
@@ -38,30 +46,22 @@ namespace ConsoleApp8
             while (opcao != 0);
         }
 
-        static void legislativo()
+        static void cadastrarEleicao(List<string> cargos, string ambito)
         {
             int opcao;
             do
             {
-                Console.WriteLine("Cadastrar Eleição Legislativa");
-                Console.WriteLine("1 - Deputado Estadual \n2 - Deputado Federal \n3 - Vereador Municipal");
-                opcao = int.Parse(Console.ReadLine());
-                string tipo_cargo = "";
-
-                switch (opcao)
+                Console.WriteLine("Cadastrar Eleição " + ambito);
+                for (int i = 0; i < cargos.Count(); i++)
                 {
-                    case 0:
-                        break;
-                    case 1:
-                        tipo_cargo = "Deputado Estadual";
-                        break;
-                    case 2:
-                        tipo_cargo = "Deputado Federal";
-                        break;
-                    case 3:
-                        tipo_cargo = "Vereador Municipal";
-                        break;
-                }
+                    Console.WriteLine(i + " - " + cargos[i]);
+                }   
+                opcao = int.Parse(Console.ReadLine());
+                
+                if(opcao != 0)
+                    string tipo_cargo = cargos[opcao];
+                else
+                    break;
 
                 if (!tipo_cargo.Equals(""))
                 {
