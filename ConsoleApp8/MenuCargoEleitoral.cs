@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace ConsoleApp8
 {
-    public partial class MenuAmbitoVotacao : Form
+    public partial class MenuCargoEleitoral : Form
     {
-        public MenuAmbitoVotacao()
+        public MenuCargoEleitoral()
         {
             InitializeComponent();
-        }
-
-        private void btnLegislativo_Click(object sender, EventArgs e)
-        {
-            new MenuCargoEleitoral().Show();
-            this.Hide();
         }
     }
 }

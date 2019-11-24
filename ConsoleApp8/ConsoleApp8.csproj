@@ -56,6 +56,12 @@
     <Compile Include="MenuAmbitoVotacao.Designer.cs">
       <DependentUpon>MenuAmbitoVotacao.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuCargoEleitoral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuCargoEleitoral.Designer.cs">
+      <DependentUpon>MenuCargoEleitoral.cs</DependentUpon>
+    </Compile>
     <Compile Include="Partido.cs" />
     <Compile Include="Pessoa.cs" />
     <Compile Include="Program.cs" />
@@ -64,6 +70,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MenuAmbitoVotacao.resx">
+      <DependentUpon>MenuAmbitoVotacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuCargoEleitoral.resx">
+      <DependentUpon>MenuCargoEleitoral.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

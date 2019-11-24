@@ -5,3 +5,6 @@ D:\trabalhosFacul\Trabalho_URNA_POO_SI\ConsoleApp8\bin\Debug\ConsoleApp8.exe
 D:\trabalhosFacul\Trabalho_URNA_POO_SI\ConsoleApp8\bin\Debug\ConsoleApp8.pdb
 D:\trabalhosFacul\Trabalho_URNA_POO_SI\ConsoleApp8\obj\Debug\ConsoleApp8.exe
 D:\trabalhosFacul\Trabalho_URNA_POO_SI\ConsoleApp8\obj\Debug\ConsoleApp8.pdb
+D:\trabalhosFacul\Trabalho_URNA_POO_SI\ConsoleApp8\obj\Debug\ConsoleApp8.MenuAmbitoVotacao.resources
+D:\trabalhosFacul\Trabalho_URNA_POO_SI\ConsoleApp8\obj\Debug\ConsoleApp8.MenuCargoEleitoral.resources
+D:\trabalhosFacul\Trabalho_URNA_POO_SI\ConsoleApp8\obj\Debug\ConsoleApp8.csproj.GenerateResource.cache
