@@ -26,18 +26,21 @@ namespace ConsoleApp8
                     case 0:
                         break;
                     case 1:
-                        cadastrarEleicao(new List<string>() { 
-                            "Deputado Estadual", 
-                            "Deputado Federal", 
-                            "Vereador Municipal" 
-                        });
+                        cadastrarEleicao(new List<string>() {
+                                "Deputado Estadual",
+                                "Deputado Federal",
+                                "Vereador Municipal"
+                            },
+                            "Legislativa");
                         break;
                     case 2:
-                        cadastrarEleicao(new List<string>() { 
-                            "Deputado Estadual", 
-                            "Deputado Federal", 
-                            "Vereador Municipal" 
-                        });
+                        cadastrarEleicao(
+                            new List<string>() { 
+                                "Deputado Estadual", 
+                                "Deputado Federal", 
+                                "Vereador Municipal"
+                            },
+                            "Executiva");
                         break;
                 }
 
@@ -49,17 +52,18 @@ namespace ConsoleApp8
         static void cadastrarEleicao(List<string> cargos, string ambito)
         {
             int opcao;
+            string tipo_cargo;
             do
             {
                 Console.WriteLine("Cadastrar Eleição " + ambito);
                 for (int i = 0; i < cargos.Count(); i++)
                 {
-                    Console.WriteLine(i + " - " + cargos[i]);
+                    Console.WriteLine(i+1 + " - " + cargos[i]);
                 }   
                 opcao = int.Parse(Console.ReadLine());
                 
                 if(opcao != 0)
-                    string tipo_cargo = cargos[opcao];
+                    tipo_cargo = cargos[opcao-1];
                 else
                     break;
 
@@ -76,9 +80,9 @@ namespace ConsoleApp8
             int opcao;
             do
             {
-                Console.WriteLine("Cadastrar Eleição Legislativa");
+                Console.WriteLine("Eleição para " + eleicao.Tipo_eleicao);
                 Console.WriteLine("Sempre que for cadastrar um candidato digite 1");
-                Console.WriteLine("se deseja sair basta digitar 0\n\n");
+                Console.WriteLine("se desejar sair basta digitar 0\n\n");
                 Console.WriteLine("1 - Cadastrar candidato\n2 - Votar\n0 - Sair");
                 opcao = int.Parse(Console.ReadLine());
 
