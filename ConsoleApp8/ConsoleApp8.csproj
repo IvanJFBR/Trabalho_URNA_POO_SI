@@ -46,6 +46,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Candidato.cs" />
+    <Compile Include="Deputado_Estadual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Deputado_Estadual.Designer.cs">
+      <DependentUpon>Deputado_Estadual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Deputado_Federal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Deputado_Federal.Designer.cs">
+      <DependentUpon>Deputado_Federal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Eleicao.cs" />
     <Compile Include="EleicaoDAO.cs" />
     <Compile Include="Eleitor.cs" />
@@ -66,17 +78,29 @@
     <Compile Include="Pessoa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vereador_Municipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vereador_Municipal.Designer.cs">
+      <DependentUpon>Vereador_Municipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Voto.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Deputado_Estadual.resx">
+      <DependentUpon>Deputado_Estadual.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuAmbitoVotacao.resx">
       <DependentUpon>MenuAmbitoVotacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuCargoEleitoral.resx">
       <DependentUpon>MenuCargoEleitoral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vereador_Municipal.resx">
+      <DependentUpon>Vereador_Municipal.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -87,6 +87,7 @@
             this.Controls.Add(this.label1);
             this.Name = "MenuAmbitoVotacao";
             this.Text = "Âmbito Votação";
+            this.Load += new System.EventHandler(this.MenuAmbitoVotacao_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

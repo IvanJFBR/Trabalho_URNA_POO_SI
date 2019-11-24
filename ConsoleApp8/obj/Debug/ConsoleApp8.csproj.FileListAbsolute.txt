@@ -8,3 +8,5 @@ D:\trabalhosFacul\Trabalho_URNA_POO_SI\ConsoleApp8\obj\Debug\ConsoleApp8.pdb
 D:\trabalhosFacul\Trabalho_URNA_POO_SI\ConsoleApp8\obj\Debug\ConsoleApp8.MenuAmbitoVotacao.resources
 D:\trabalhosFacul\Trabalho_URNA_POO_SI\ConsoleApp8\obj\Debug\ConsoleApp8.MenuCargoEleitoral.resources
 D:\trabalhosFacul\Trabalho_URNA_POO_SI\ConsoleApp8\obj\Debug\ConsoleApp8.csproj.GenerateResource.cache
+D:\trabalhosFacul\Trabalho_URNA_POO_SI\ConsoleApp8\obj\Debug\ConsoleApp8.Deputado_Estadual.resources
+D:\trabalhosFacul\Trabalho_URNA_POO_SI\ConsoleApp8\obj\Debug\ConsoleApp8.Vereador_Municipal.resources

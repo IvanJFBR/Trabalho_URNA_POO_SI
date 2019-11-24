@@ -33,6 +33,7 @@
             this.btnDepEstadual = new System.Windows.Forms.Button();
             this.btnVerMunicipal = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -55,6 +56,7 @@
             this.btnDepFederal.TabIndex = 5;
             this.btnDepFederal.Text = "Deputado Federal";
             this.btnDepFederal.UseVisualStyleBackColor = true;
+            this.btnDepFederal.Click += new System.EventHandler(this.btnDepFederal_Click);
             // 
             // btnDepEstadual
             // 
@@ -66,6 +68,7 @@
             this.btnDepEstadual.TabIndex = 4;
             this.btnDepEstadual.Text = "Deputado Estadual";
             this.btnDepEstadual.UseVisualStyleBackColor = true;
+            this.btnDepEstadual.Click += new System.EventHandler(this.btnDepEstadual_Click);
             // 
             // btnVerMunicipal
             // 
@@ -76,6 +79,7 @@
             this.btnVerMunicipal.TabIndex = 7;
             this.btnVerMunicipal.Text = "Vereador Municipal";
             this.btnVerMunicipal.UseVisualStyleBackColor = true;
+            this.btnVerMunicipal.Click += new System.EventHandler(this.btnVerMunicipal_Click);
             // 
             // label1
             // 
@@ -87,11 +91,22 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Urna Eleitoral";
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Location = new System.Drawing.Point(17, 415);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(75, 23);
+            this.btnVoltar.TabIndex = 9;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
             // MenuCargoEleitoral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnVerMunicipal);
             this.Controls.Add(this.label2);
@@ -111,5 +126,6 @@
         private System.Windows.Forms.Button btnDepEstadual;
         private System.Windows.Forms.Button btnVerMunicipal;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }

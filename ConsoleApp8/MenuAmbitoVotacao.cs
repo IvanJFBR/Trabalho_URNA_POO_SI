@@ -12,14 +12,21 @@ namespace ConsoleApp8
 {
     public partial class MenuAmbitoVotacao : Form
     {
+        MenuCargoEleitoral cargoEleitoral;
+
         public MenuAmbitoVotacao()
         {
             InitializeComponent();
         }
 
+        private void MenuAmbitoVotacao_Load(object sender, EventArgs e)
+        {
+            cargoEleitoral = new MenuCargoEleitoral(this);
+        }
+
         private void btnLegislativo_Click(object sender, EventArgs e)
         {
-            new MenuCargoEleitoral().Show();
+            cargoEleitoral.Show();
             this.Hide();
         }
     }
