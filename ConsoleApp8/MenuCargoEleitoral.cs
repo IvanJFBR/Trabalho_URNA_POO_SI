@@ -16,9 +16,7 @@ namespace ConsoleApp8
 
         MenuAmbitoVotacao ambitoVotacao;
 
-        Deputado_Estadual deputadoEstadual = new Deputado_Estadual();
-        Deputado_Federal deputadoFederal = new Deputado_Federal();
-        Vereador_Municipal vereadorMunicipal = new Vereador_Municipal();
+        MenuCadastros cadastros = new MenuCadastros();
 
         public MenuCargoEleitoral(MenuAmbitoVotacao ambitoVotacao)
         {
@@ -28,19 +26,22 @@ namespace ConsoleApp8
         
         private void btnDepEstadual_Click(object sender, EventArgs e)
         {
-            deputadoEstadual.Show();
+            cadastros.Tipo_eleicao = "Deputado Estadual";
+            cadastros.Show();
             this.Hide();
         }
 
         private void btnDepFederal_Click(object sender, EventArgs e)
         {
-            deputadoFederal.Show();
+            cadastros.Tipo_eleicao = "Deputado Federal";
+            cadastros.Show();
             this.Hide();
         }
 
         private void btnVerMunicipal_Click(object sender, EventArgs e)
         {
-            vereadorMunicipal.Show();
+            cadastros.Tipo_eleicao = "Vereador Municipal";
+            cadastros.Show();
             this.Hide();
         }
 

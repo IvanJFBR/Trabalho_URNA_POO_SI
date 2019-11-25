@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ConsoleApp8
 {
-    public partial class Deputado_Estadual : Form
+    public partial class Formulario_Partido : Form
     {
-        public Deputado_Estadual()
+        public Formulario_Partido()
         {
             InitializeComponent();
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
