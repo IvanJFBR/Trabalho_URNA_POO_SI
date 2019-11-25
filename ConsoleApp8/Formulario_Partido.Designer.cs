@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbSigla = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbNumero = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -48,13 +49,13 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Urna Eleitoral";
             // 
-            // textBox1
+            // tbNome
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(218, 175);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(314, 29);
-            this.textBox1.TabIndex = 16;
+            this.tbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNome.Location = new System.Drawing.Point(218, 175);
+            this.tbNome.Name = "tbNome";
+            this.tbNome.Size = new System.Drawing.Size(314, 29);
+            this.tbNome.TabIndex = 16;
             // 
             // label2
             // 
@@ -74,14 +75,14 @@
             this.label3.TabIndex = 19;
             this.label3.Text = "Sigla";
             // 
-            // textBox2
+            // tbSigla
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(538, 175);
-            this.textBox2.MaxLength = 2;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(47, 29);
-            this.textBox2.TabIndex = 18;
+            this.tbSigla.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSigla.Location = new System.Drawing.Point(538, 175);
+            this.tbSigla.MaxLength = 2;
+            this.tbSigla.Name = "tbSigla";
+            this.tbSigla.Size = new System.Drawing.Size(47, 29);
+            this.tbSigla.TabIndex = 18;
             // 
             // label4
             // 
@@ -92,14 +93,14 @@
             this.label4.TabIndex = 21;
             this.label4.Text = "Número";
             // 
-            // textBox3
+            // tbNumero
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(218, 229);
-            this.textBox3.MaxLength = 5;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(367, 29);
-            this.textBox3.TabIndex = 20;
+            this.tbNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNumero.Location = new System.Drawing.Point(218, 229);
+            this.tbNumero.MaxLength = 5;
+            this.tbNumero.Name = "tbNumero";
+            this.tbNumero.Size = new System.Drawing.Size(367, 29);
+            this.tbNumero.TabIndex = 20;
             // 
             // btnSalvar
             // 
@@ -112,21 +113,34 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(330, 110);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(152, 24);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Cadastrar Partido";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Formulario_Partido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbNumero);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbSigla);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbNome);
             this.Controls.Add(this.label1);
             this.Name = "Formulario_Partido";
             this.Text = "Formulario_Partido";
+            this.Load += new System.EventHandler(this.Formulario_Partido_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,12 +149,13 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbNome;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbSigla;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbNumero;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Label label5;
     }
 }

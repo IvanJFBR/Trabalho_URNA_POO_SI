@@ -85,6 +85,7 @@
             this.btnCadastrarPartido.TabIndex = 11;
             this.btnCadastrarPartido.Text = "Cadastrar Partido";
             this.btnCadastrarPartido.UseVisualStyleBackColor = true;
+            this.btnCadastrarPartido.Click += new System.EventHandler(this.btnCadastrarPartido_Click);
             // 
             // btnCadastrarCandidato
             // 

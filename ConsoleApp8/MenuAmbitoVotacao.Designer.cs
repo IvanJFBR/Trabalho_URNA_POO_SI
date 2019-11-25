@@ -65,6 +65,7 @@
             this.btnExecutivo.TabIndex = 2;
             this.btnExecutivo.Text = "Executivo";
             this.btnExecutivo.UseVisualStyleBackColor = true;
+            this.btnExecutivo.Click += new System.EventHandler(this.btnExecutivo_Click);
             // 
             // label2
             // 

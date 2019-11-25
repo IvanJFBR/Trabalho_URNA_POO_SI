@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp8
 {
-    class Eleicao
+    public class Eleicao
     {
         private string tipo_eleicao;
         private string ambito_eleicao;
         private List<Candidato> candidatos = new List<Candidato>();
         private List<Voto> votos = new List<Voto>();
+        private List<Partido> partidos = new List<Partido>();
 
         public Eleicao(string tipo_eleicao, string ambito_eleicao)
         {
@@ -24,5 +25,6 @@ namespace ConsoleApp8
         public string Ambito_eleicao { get => ambito_eleicao; set => ambito_eleicao = value; }
         internal List<Candidato> Candidatos { get => candidatos; set => candidatos = value; }
         internal List<Voto> Votos { get => votos; set => votos = value; }
+        internal List<Partido> Partidos { get => partidos; set => partidos = value; }
     }
 }

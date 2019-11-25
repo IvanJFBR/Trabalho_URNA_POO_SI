@@ -1,4 +1,6 @@
-﻿namespace ConsoleApp8
+﻿using System.Windows.Forms;
+
+namespace ConsoleApp8
 {
     partial class MenuCargoEleitoral
     {
@@ -29,9 +31,9 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.btnDepFederal = new System.Windows.Forms.Button();
-            this.btnDepEstadual = new System.Windows.Forms.Button();
-            this.btnVerMunicipal = new System.Windows.Forms.Button();
+            this.btnSegundaOpcao = new System.Windows.Forms.Button();
+            this.btnPrimeiraOpcao = new System.Windows.Forms.Button();
+            this.btnTerceiraOpcao = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -47,39 +49,39 @@
             this.label2.Text = "Eleição";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnDepFederal
+            // btnSegundaOpcao
             // 
-            this.btnDepFederal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDepFederal.Location = new System.Drawing.Point(221, 208);
-            this.btnDepFederal.Name = "btnDepFederal";
-            this.btnDepFederal.Size = new System.Drawing.Size(374, 60);
-            this.btnDepFederal.TabIndex = 5;
-            this.btnDepFederal.Text = "Deputado Federal";
-            this.btnDepFederal.UseVisualStyleBackColor = true;
-            this.btnDepFederal.Click += new System.EventHandler(this.btnDepFederal_Click);
+            this.btnSegundaOpcao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSegundaOpcao.Location = new System.Drawing.Point(221, 208);
+            this.btnSegundaOpcao.Name = "btnSegundaOpcao";
+            this.btnSegundaOpcao.Size = new System.Drawing.Size(374, 60);
+            this.btnSegundaOpcao.TabIndex = 5;
+            this.btnSegundaOpcao.Text = "Deputado Federal";
+            this.btnSegundaOpcao.UseVisualStyleBackColor = true;
+            this.btnSegundaOpcao.Click += new System.EventHandler(this.btnSegundaOpcao_Click);
             // 
-            // btnDepEstadual
+            // btnPrimeiraOpcao
             // 
-            this.btnDepEstadual.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnDepEstadual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDepEstadual.Location = new System.Drawing.Point(221, 142);
-            this.btnDepEstadual.Name = "btnDepEstadual";
-            this.btnDepEstadual.Size = new System.Drawing.Size(374, 60);
-            this.btnDepEstadual.TabIndex = 4;
-            this.btnDepEstadual.Text = "Deputado Estadual";
-            this.btnDepEstadual.UseVisualStyleBackColor = true;
-            this.btnDepEstadual.Click += new System.EventHandler(this.btnDepEstadual_Click);
+            this.btnPrimeiraOpcao.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnPrimeiraOpcao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrimeiraOpcao.Location = new System.Drawing.Point(221, 142);
+            this.btnPrimeiraOpcao.Name = "btnPrimeiraOpcao";
+            this.btnPrimeiraOpcao.Size = new System.Drawing.Size(374, 60);
+            this.btnPrimeiraOpcao.TabIndex = 4;
+            this.btnPrimeiraOpcao.Text = "Deputado Estadual";
+            this.btnPrimeiraOpcao.UseVisualStyleBackColor = true;
+            this.btnPrimeiraOpcao.Click += new System.EventHandler(this.btnPrimeiraOpcao_Click);
             // 
-            // btnVerMunicipal
+            // btnTerceiraOpcao
             // 
-            this.btnVerMunicipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerMunicipal.Location = new System.Drawing.Point(221, 274);
-            this.btnVerMunicipal.Name = "btnVerMunicipal";
-            this.btnVerMunicipal.Size = new System.Drawing.Size(374, 60);
-            this.btnVerMunicipal.TabIndex = 7;
-            this.btnVerMunicipal.Text = "Vereador Municipal";
-            this.btnVerMunicipal.UseVisualStyleBackColor = true;
-            this.btnVerMunicipal.Click += new System.EventHandler(this.btnVerMunicipal_Click);
+            this.btnTerceiraOpcao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTerceiraOpcao.Location = new System.Drawing.Point(221, 274);
+            this.btnTerceiraOpcao.Name = "btnTerceiraOpcao";
+            this.btnTerceiraOpcao.Size = new System.Drawing.Size(374, 60);
+            this.btnTerceiraOpcao.TabIndex = 7;
+            this.btnTerceiraOpcao.Text = "Vereador Municipal";
+            this.btnTerceiraOpcao.UseVisualStyleBackColor = true;
+            this.btnTerceiraOpcao.Click += new System.EventHandler(this.btnTerceiraOpcao_Click);
             // 
             // label1
             // 
@@ -108,10 +110,10 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnVerMunicipal);
+            this.Controls.Add(this.btnTerceiraOpcao);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnDepFederal);
-            this.Controls.Add(this.btnDepEstadual);
+            this.Controls.Add(this.btnSegundaOpcao);
+            this.Controls.Add(this.btnPrimeiraOpcao);
             this.Name = "MenuCargoEleitoral";
             this.Text = "MenuCargoEleitoral";
             this.ResumeLayout(false);
@@ -122,10 +124,14 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnDepFederal;
-        private System.Windows.Forms.Button btnDepEstadual;
-        private System.Windows.Forms.Button btnVerMunicipal;
+        private System.Windows.Forms.Button btnSegundaOpcao;
+        private System.Windows.Forms.Button btnPrimeiraOpcao;
+        private System.Windows.Forms.Button btnTerceiraOpcao;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnVoltar;
+
+        public Button BtnSegundaOpcao { get => btnSegundaOpcao; set => btnSegundaOpcao = value; }
+        public Button BtnPrimeiraOpcao { get => btnPrimeiraOpcao; set => btnPrimeiraOpcao = value; }
+        public Button BtnTerceiraOpcao { get => btnTerceiraOpcao; set => btnTerceiraOpcao = value; }
     }
 }

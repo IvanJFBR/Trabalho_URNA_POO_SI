@@ -23,31 +23,33 @@ namespace ConsoleApp8
             this.ambitoVotacao = ambitoVotacao;
             InitializeComponent();
         }
-        
-        private void btnDepEstadual_Click(object sender, EventArgs e)
+
+        private void btnPrimeiraOpcao_Click(object sender, EventArgs e)
         {
-            cadastros.Tipo_eleicao = "Deputado Estadual";
-            cadastros.Show();
-            this.Hide();
+            abrirOpcaoMenu(btnPrimeiraOpcao.Text);
         }
 
-        private void btnDepFederal_Click(object sender, EventArgs e)
+        private void btnSegundaOpcao_Click(object sender, EventArgs e)
         {
-            cadastros.Tipo_eleicao = "Deputado Federal";
-            cadastros.Show();
-            this.Hide();
+            abrirOpcaoMenu(btnSegundaOpcao.Text);
         }
 
-        private void btnVerMunicipal_Click(object sender, EventArgs e)
+        private void btnTerceiraOpcao_Click(object sender, EventArgs e)
         {
-            cadastros.Tipo_eleicao = "Vereador Municipal";
-            cadastros.Show();
-            this.Hide();
+            abrirOpcaoMenu(btnTerceiraOpcao.Text);
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             ambitoVotacao.Show();
+            this.Hide();
+        }
+
+        private void abrirOpcaoMenu(string cargo)
+        {
+            cadastros.Tipo_eleicao = cargo;
+            cadastros.Ambito_eleicao = ambitoVotacao.Ambito_atual;
+            cadastros.Show();
             this.Hide();
         }
     }
