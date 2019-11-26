@@ -46,6 +46,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Candidato.cs" />
+    <Compile Include="Formulario_Candidato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario_Candidato.Designer.cs">
+      <DependentUpon>Formulario_Candidato.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formulario_Partido.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Formulario_Candidato.resx">
+      <DependentUpon>Formulario_Candidato.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formulario_Partido.resx">
       <DependentUpon>Formulario_Partido.cs</DependentUpon>
     </EmbeddedResource>

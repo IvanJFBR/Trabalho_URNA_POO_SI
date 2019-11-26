@@ -69,7 +69,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(356, 89);
+            this.label2.Location = new System.Drawing.Point(362, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 24);
             this.label2.TabIndex = 12;
@@ -97,6 +97,7 @@
             this.btnCadastrarCandidato.TabIndex = 10;
             this.btnCadastrarCandidato.Text = "Cadastrar Candidato";
             this.btnCadastrarCandidato.UseVisualStyleBackColor = true;
+            this.btnCadastrarCandidato.Click += new System.EventHandler(this.btnCadastrarCandidato_Click);
             // 
             // MenuCadastros
             // 

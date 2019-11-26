@@ -29,6 +29,16 @@ namespace ConsoleApp8
         {
             Formulario_Partido formulario = new Formulario_Partido();
             formulario.Eleicao = eleicao;
+            formulario.Show();
+            this.Hide();
+        }
+
+        private void btnCadastrarCandidato_Click(object sender, EventArgs e)
+        {
+            Formulario_Candidato formulario = new Formulario_Candidato();
+            formulario.Eleicao = eleicao;
+            formulario.Show();
+            this.Hide();
         }
     }
 }

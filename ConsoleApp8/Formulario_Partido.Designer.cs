@@ -140,7 +140,6 @@
             this.Controls.Add(this.label1);
             this.Name = "Formulario_Partido";
             this.Text = "Formulario_Partido";
-            this.Load += new System.EventHandler(this.Formulario_Partido_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

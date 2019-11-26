@@ -33,12 +33,30 @@ namespace ConsoleApp8
                 MessageBox.Show("Número é obrigatório!");
 
             else
-            eleicao.Partidos.Add(new Partido(tbNome.Text, tbSigla.Text, int.Parse(tbNumero.Text)));
+            {
+                if (!validaExistePartido(eleicao.Partidos))
+                {
+                    eleicao.Partidos.Add(new Partido(tbNome.Text, tbSigla.Text, int.Parse(tbNumero.Text)));
+                    MessageBox.Show("Salvo com sucesso!");
+                    limpaCampos();
+                }
+                else
+                    MessageBox.Show("Partido já existe!");
+            }
         }
 
-        private void Formulario_Partido_Load(object sender, EventArgs e)
+        private bool validaExistePartido(List<Partido> partidos)
         {
+            return partidos.Exists(partido => partido.Sigla.Contains(tbSigla.Text)) ||
+                partidos.Exists(partido => partido.Nome.Contains(tbNome.Text)) ||
+                partidos.Exists(partido => partido.Numero == int.Parse(tbNumero.Text));
+        }
 
+        private void limpaCampos()
+        {
+            tbNome.Text = "";
+            tbSigla.Text = "";
+            tbNumero.Text = "";
         }
     }
 }

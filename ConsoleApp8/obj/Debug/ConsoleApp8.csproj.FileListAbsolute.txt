@@ -10,3 +10,4 @@ D:\trabalhosFacul\Trabalho_URNA_POO_SI\ConsoleApp8\obj\Debug\ConsoleApp8.MenuCar
 D:\trabalhosFacul\Trabalho_URNA_POO_SI\ConsoleApp8\obj\Debug\ConsoleApp8.csproj.GenerateResource.cache
 D:\trabalhosFacul\Trabalho_URNA_POO_SI\ConsoleApp8\obj\Debug\ConsoleApp8.Formulario_Partido.resources
 D:\trabalhosFacul\Trabalho_URNA_POO_SI\ConsoleApp8\obj\Debug\ConsoleApp8.MenuCadastros.resources
+D:\trabalhosFacul\Trabalho_URNA_POO_SI\ConsoleApp8\obj\Debug\ConsoleApp8.Formulario_Candidato.resources
