@@ -58,6 +58,12 @@
     <Compile Include="Formulario_Partido.Designer.cs">
       <DependentUpon>Formulario_Partido.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formulario_Votacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario_Votacao.Designer.cs">
+      <DependentUpon>Formulario_Votacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuCadastros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario_Partido.resx">
       <DependentUpon>Formulario_Partido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario_Votacao.resx">
+      <DependentUpon>Formulario_Votacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuCadastros.resx">
       <DependentUpon>MenuCadastros.cs</DependentUpon>

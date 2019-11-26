@@ -58,7 +58,7 @@
             // btnIniciarVotacao
             // 
             this.btnIniciarVotacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciarVotacao.Location = new System.Drawing.Point(201, 276);
+            this.btnIniciarVotacao.Location = new System.Drawing.Point(217, 276);
             this.btnIniciarVotacao.Name = "btnIniciarVotacao";
             this.btnIniciarVotacao.Size = new System.Drawing.Size(374, 60);
             this.btnIniciarVotacao.TabIndex = 13;
@@ -69,7 +69,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(362, 90);
+            this.label2.Location = new System.Drawing.Point(378, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 24);
             this.label2.TabIndex = 12;
@@ -79,7 +79,7 @@
             // btnCadastrarPartido
             // 
             this.btnCadastrarPartido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarPartido.Location = new System.Drawing.Point(201, 144);
+            this.btnCadastrarPartido.Location = new System.Drawing.Point(217, 144);
             this.btnCadastrarPartido.Name = "btnCadastrarPartido";
             this.btnCadastrarPartido.Size = new System.Drawing.Size(374, 60);
             this.btnCadastrarPartido.TabIndex = 11;
@@ -91,7 +91,7 @@
             // 
             this.btnCadastrarCandidato.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCadastrarCandidato.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarCandidato.Location = new System.Drawing.Point(201, 210);
+            this.btnCadastrarCandidato.Location = new System.Drawing.Point(217, 210);
             this.btnCadastrarCandidato.Name = "btnCadastrarCandidato";
             this.btnCadastrarCandidato.Size = new System.Drawing.Size(374, 60);
             this.btnCadastrarCandidato.TabIndex = 10;
