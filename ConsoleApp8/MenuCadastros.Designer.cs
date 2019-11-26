@@ -64,6 +64,7 @@
             this.btnIniciarVotacao.TabIndex = 13;
             this.btnIniciarVotacao.Text = "Iniciar Votação";
             this.btnIniciarVotacao.UseVisualStyleBackColor = true;
+            this.btnIniciarVotacao.Click += new System.EventHandler(this.btnIniciarVotacao_Click);
             // 
             // label2
             // 

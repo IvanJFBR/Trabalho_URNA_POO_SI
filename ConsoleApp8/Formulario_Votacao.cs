@@ -76,20 +76,23 @@ namespace ConsoleApp8
 
         private void btnBranco_Click(object sender, EventArgs e)
         {
-            var confirmResult = MessageBox.Show(
+            if (validaCampos())
+            {
+                var confirmResult = MessageBox.Show(
                 "",
                 "Votar em Branco?",
                 MessageBoxButtons.YesNo);
 
-            if (confirmResult == DialogResult.Yes)
-            {
-                eleicao.Votos.Add(new Voto(
-                    "branco",
-                    null,
-                    new Eleitor(tbNome.Text, tbCpf.Text, tbTituloEleitor.Text)));
+                if (confirmResult == DialogResult.Yes)
+                {
+                    eleicao.Votos.Add(new Voto(
+                        "branco",
+                        null,
+                        new Eleitor(tbNome.Text, tbCpf.Text, tbTituloEleitor.Text)));
 
-                MessageBox.Show("CONFIRMADO!");
-                limpaCampos();
+                    MessageBox.Show("CONFIRMADO!");
+                    limpaCampos();
+                }
             }
         }
 

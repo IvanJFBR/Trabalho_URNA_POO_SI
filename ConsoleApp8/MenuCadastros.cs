@@ -40,5 +40,21 @@ namespace ConsoleApp8
             formulario.Show();
             this.Hide();
         }
+
+        private void btnIniciarVotacao_Click(object sender, EventArgs e)
+        {
+            var confirmResult = MessageBox.Show(
+                "Iniciar a votação inibe a criação de novos partidos, assim como de novos candidatos",
+                "Confirmar Inicio da Votação?",
+                MessageBoxButtons.YesNo);
+
+            if (confirmResult == DialogResult.Yes)
+            {
+                Formulario_Votacao formulario = new Formulario_Votacao();
+                formulario.Eleicao = eleicao;
+                formulario.Show();
+                this.Hide();
+            }
+        }
     }
 }
