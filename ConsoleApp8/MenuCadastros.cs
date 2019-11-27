@@ -15,19 +15,21 @@ namespace ConsoleApp8
         private string tipo_eleicao;
         private string ambito_eleicao;
         private Eleicao eleicao = new Eleicao("", "");
+        MenuCargoEleitoral cargoEleitoral;
 
         public string Tipo_eleicao { get => tipo_eleicao; set => tipo_eleicao = value; }
         public string Ambito_eleicao { get => ambito_eleicao; set => ambito_eleicao = value; }
         public Eleicao Eleicao { get => eleicao; set => eleicao = value; }
 
-        public MenuCadastros()
+        public MenuCadastros(MenuCargoEleitoral cargoEleitoral)
         {
+            this.cargoEleitoral = cargoEleitoral;
             InitializeComponent();
         }
 
         private void btnCadastrarPartido_Click(object sender, EventArgs e)
         {
-            Formulario_Partido formulario = new Formulario_Partido();
+            Formulario_Partido formulario = new Formulario_Partido(this);
             formulario.Eleicao = eleicao;
             formulario.Show();
             this.Hide();
@@ -35,7 +37,7 @@ namespace ConsoleApp8
 
         private void btnCadastrarCandidato_Click(object sender, EventArgs e)
         {
-            Formulario_Candidato formulario = new Formulario_Candidato();
+            Formulario_Candidato formulario = new Formulario_Candidato(this);
             formulario.Eleicao = eleicao;
             formulario.Show();
             this.Hide();
@@ -55,6 +57,12 @@ namespace ConsoleApp8
                 formulario.Show();
                 this.Hide();
             }
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            cargoEleitoral.Show();
+            this.Hide();
         }
     }
 }

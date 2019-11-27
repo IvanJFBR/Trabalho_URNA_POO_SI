@@ -116,6 +116,7 @@ namespace ConsoleApp8
             this.Controls.Add(this.btnPrimeiraOpcao);
             this.Name = "MenuCargoEleitoral";
             this.Text = "MenuCargoEleitoral";
+            this.Load += new System.EventHandler(this.MenuCargoEleitoral_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

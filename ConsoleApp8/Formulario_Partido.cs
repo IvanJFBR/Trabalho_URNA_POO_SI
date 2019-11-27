@@ -13,9 +13,11 @@ namespace ConsoleApp8
     public partial class Formulario_Partido : Form
     {
         private Eleicao eleicao;
+        MenuCadastros menuCadastros;
 
-        public Formulario_Partido()
+        public Formulario_Partido(MenuCadastros menuCadastros)
         {
+            this.menuCadastros = menuCadastros;
             InitializeComponent();
         }
 
@@ -57,6 +59,12 @@ namespace ConsoleApp8
             tbNome.Text = "";
             tbSigla.Text = "";
             tbNumero.Text = "";
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            menuCadastros.Show();
+            this.Hide();
         }
     }
 }

@@ -13,9 +13,11 @@ namespace ConsoleApp8
     public partial class Formulario_Candidato : Form
     {
         private Eleicao eleicao;
+        MenuCadastros menuCadastros;
 
-        public Formulario_Candidato()
+        public Formulario_Candidato(MenuCadastros menuCadastros)
         {
+            this.menuCadastros = menuCadastros;
             InitializeComponent();
         }
 
@@ -25,9 +27,6 @@ namespace ConsoleApp8
         {
             if (String.IsNullOrEmpty(tbNome.Text))
                 MessageBox.Show("Nome é obrigatório!");
-
-            else if (String.IsNullOrEmpty(tbNumero.Text))
-                MessageBox.Show("Número é obrigatório!");
 
             else if (String.IsNullOrEmpty(tbCpf.Text))
                 MessageBox.Show("CPF é obrigatório!");
@@ -42,12 +41,14 @@ namespace ConsoleApp8
             {
                 if (!validaExisteCandidato(eleicao.Candidatos))
                 {
-                    eleicao.Candidatos.Add(new Candidato(
+                    var candidato = new Candidato(
                         eleicao.Partidos.Find(partido => partido.Sigla.Contains(cbPartido.Text)),
                         int.Parse(tbNumero.Text),
                         tbNome.Text,
                         tbCpf.Text,
-                        tbTituloEleitor.Text));
+                        tbTituloEleitor.Text);
+
+                    eleicao.Candidatos.Add(candidato);
 
                     MessageBox.Show("Salvo com sucesso!");
                     limpaCampos();
@@ -80,13 +81,19 @@ namespace ConsoleApp8
             {
                 foreach (var partido in eleicao.Partidos)
                 {
-                    cbPartido.Items.Add(partido);
+                    cbPartido.Items.Add(partido.Sigla);
                 }
             }
             else
             {
                 MessageBox.Show("Não existem partidos cadastrados!");
             }
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            menuCadastros.Show();
+            this.Hide();
         }
     }
 }

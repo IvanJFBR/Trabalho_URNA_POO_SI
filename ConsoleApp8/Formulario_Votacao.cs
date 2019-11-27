@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,7 @@ namespace ConsoleApp8
     public partial class Formulario_Votacao : Form
     {
         private Eleicao eleicao;
+        private EleicaoDAO eleicaoController = new EleicaoDAO();
 
         public Formulario_Votacao()
         {
@@ -25,7 +27,7 @@ namespace ConsoleApp8
         {
             if (validaCampos())
             {
-                if (validaExisteCandidato(eleicao.Candidatos))
+                if (!String.IsNullOrEmpty(tbNumero.Text) || validaExisteCandidato(eleicao.Candidatos))
                 {
                     var candidato_votado = eleicao.Candidatos.Find(candidato => candidato.Numero_candidato == int.Parse(tbNumero.Text));
 
@@ -36,10 +38,14 @@ namespace ConsoleApp8
 
                     if (confirmResult == DialogResult.Yes)
                     {
-                        eleicao.Votos.Add(new Voto(
-                            "valido", candidato_votado, 
-                            new Eleitor(tbNome.Text, tbCpf.Text, tbTituloEleitor.Text)));
+                        var voto = new Voto(
+                            "valido", candidato_votado,
+                            new Eleitor(tbNome.Text, tbCpf.Text, tbTituloEleitor.Text));
 
+                        eleicao.Votos.Add(voto);
+                        eleicaoController.salvarVoto(voto);
+
+                        playUrnaConfimation();
                         MessageBox.Show("CONFIRMADO!");
                         limpaCampos();
                     }
@@ -52,11 +58,15 @@ namespace ConsoleApp8
                                      MessageBoxButtons.YesNo);
                     if (confirmResult == DialogResult.Yes)
                     {
-                        eleicao.Votos.Add(new Voto(
+                        var voto = new Voto(
                             "nulo",
                             null,
-                            new Eleitor(tbNome.Text, tbCpf.Text, tbTituloEleitor.Text)));
+                            new Eleitor(tbNome.Text, tbCpf.Text, tbTituloEleitor.Text));
 
+                        eleicao.Votos.Add(voto);
+                        eleicaoController.salvarVoto(voto);
+
+                        playUrnaConfimation();
                         MessageBox.Show("CONFIRMADO!");
                         limpaCampos();
                     }
@@ -85,11 +95,15 @@ namespace ConsoleApp8
 
                 if (confirmResult == DialogResult.Yes)
                 {
-                    eleicao.Votos.Add(new Voto(
+                    var voto = new Voto(
                         "branco",
                         null,
-                        new Eleitor(tbNome.Text, tbCpf.Text, tbTituloEleitor.Text)));
+                        new Eleitor(tbNome.Text, tbCpf.Text, tbTituloEleitor.Text));
 
+                    eleicao.Votos.Add(voto);
+                    eleicaoController.salvarVoto(voto);
+
+                    playUrnaConfimation();
                     MessageBox.Show("CONFIRMADO!");
                     limpaCampos();
                 }
@@ -117,12 +131,16 @@ namespace ConsoleApp8
             else if (String.IsNullOrEmpty(tbTituloEleitor.Text))
                 MessageBox.Show("Titulo de Eleitor é obrigatório!");
 
-            else if (String.IsNullOrEmpty(tbNumero.Text))
-                MessageBox.Show("Número do candidato é obrigatório!");
             else
                 validacao = true;
 
             return validacao;
+        }
+
+        private void playUrnaConfimation()
+        {
+            SoundPlayer simpleSound = new SoundPlayer(@"c:\Users\IvanJ\Downloads\urna.wav");
+            simpleSound.Play();
         }
     }
 }

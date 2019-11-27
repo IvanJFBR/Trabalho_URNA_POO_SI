@@ -16,7 +16,7 @@ namespace ConsoleApp8
 
         MenuAmbitoVotacao ambitoVotacao;
 
-        MenuCadastros cadastros = new MenuCadastros();
+        MenuCadastros cadastros;
 
         public MenuCargoEleitoral(MenuAmbitoVotacao ambitoVotacao)
         {
@@ -51,6 +51,11 @@ namespace ConsoleApp8
             cadastros.Ambito_eleicao = ambitoVotacao.Ambito_atual;
             cadastros.Show();
             this.Hide();
+        }
+
+        private void MenuCargoEleitoral_Load(object sender, EventArgs e)
+        {
+            cadastros = new MenuCadastros(this);
         }
     }
 }

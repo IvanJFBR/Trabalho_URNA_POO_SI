@@ -37,6 +37,7 @@
             this.tbNumero = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -124,11 +125,22 @@
             this.label5.Text = "Cadastrar Partido";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Location = new System.Drawing.Point(17, 415);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(75, 23);
+            this.btnVoltar.TabIndex = 24;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
             // Formulario_Partido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.label4);
@@ -156,5 +168,6 @@
         private System.Windows.Forms.TextBox tbNumero;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }

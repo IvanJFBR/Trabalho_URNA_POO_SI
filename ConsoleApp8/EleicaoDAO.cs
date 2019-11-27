@@ -1,13 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace ConsoleApp8
 {
     class EleicaoDAO : IEleicao
     {
+        List<VotoUI> votos;
+
+        public EleicaoDAO()
+        {
+            this.votos = new List<VotoUI>();
+        }
+
         public void cadastrarCandidato(Eleicao eleicao, Candidato candidato)
         {
             eleicao.Candidatos.Add(candidato);
@@ -28,6 +37,24 @@ namespace ConsoleApp8
                     break;
                 }
             }
+        }
+
+        public void salvarVoto(Voto voto)
+        {
+            VotoUI votoXML = new VotoUI()
+            {
+                Tipo_voto = voto.Tipo_voto,
+                Numero_candidato = voto.Candidato != null ? voto.Candidato.Numero_candidato : 0,
+                Cpf_eleitor = voto.Eleitor.Cpf,
+                Partido = voto.Candidato.Partido.Sigla
+            };
+
+            this.votos.Add(votoXML);
+
+            XmlSerializer ser = new XmlSerializer(typeof(List<VotoUI>));
+            FileStream fs = new FileStream("D://Temp/arquivo.xml", FileMode.OpenOrCreate);
+            ser.Serialize(fs, this.votos);
+            fs.Close();
         }
     }
 }

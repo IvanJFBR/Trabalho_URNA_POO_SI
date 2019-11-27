@@ -20,6 +20,7 @@ namespace ConsoleApp8
         ) : base(nome,cpf,titulo_eleitor)
         {           
             this.partido = partido;
+            this.numero_candidato = numero_candidato;
         }
 
         public Partido Partido { get => partido;}
